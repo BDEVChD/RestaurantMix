@@ -14,14 +14,27 @@
                 <div class="form-group">
                 <label for="phoneinput">First Name</label>
                 <input type="text" class="form-control" id="phoneinput" placeholder="John">
-            </div> 
-        </div>
-            <div class="col-md-9">
-            <div class="form-group">
-            <label for="emailinput">Email address</label>
-            <input type="email" class="form-control" id="emailinput" placeholder="name@example.com" name="email">
-        </div>
+                 </div> 
             </div>
+            <div class="col-md-6"> 
+                <div class="form-group">
+                <label for="phoneinput">Last Name</label>
+                <input type="text" class="form-control" id="phoneinput" placeholder="Doe">
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="emailinput">Email address</label>
+                    <input type="email" class="form-control" id="emailinput" placeholder="name@example.com" name="email">
+                 </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="phoneinput">Phone #</label>
+                    <input type="text" class="form-control" id="phoneinput" placeholder="718-374-1847" name="email">
+                 </div>
+            </div>
+            
         </div>  
         <div class="form-group">
         <button class="btn btn-primary mb-2" type="submit">Confirm</button>

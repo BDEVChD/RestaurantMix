@@ -8,7 +8,15 @@
         <div class="row">
             <div class="col-md-6">
             <h1>Get on the List!</h1>
-        <form>         
+        <form>     
+        <div class="form-group">
+            <label for="firstnameinput">First Name</label>
+            <input type="text" name="fname" class="form-control" id="firstnameinput" placeholder="Johnny">
+        </div>  
+        <div class="form-group">
+            <label for="lastnameinput">First Name</label>
+            <input type="text" name="lname" class="form-control" id="firstnameinput" placeholder="Doe">
+        </div>    
         <div class="form-group">
             <label for="emailinput">Email address</label>
             <input type="email" class="form-control" id="emailinput" placeholder="name@example.com" name="email">

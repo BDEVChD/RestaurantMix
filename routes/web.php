@@ -17,27 +17,50 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/about', function () {
-    return view('pages/about');
+//Admin Dashboard
+Route::get('/admin', function () {
+    return view('admin/dashboard');
 });
 
-Route::get('/menu', function () {
-    return view('menu/index');
+//Admin Authentication
+Route::get('/admin/register', function () {
+    return view('admin/register');
 });
 
-Route::get('/menu/{slug}', function () {
-    return view('menu/single-menu');
+Route::get('/admin/login', function () {
+    return view('admin/login');
 });
+//Admin Dashboard: 
+Route::get('/admin', 'admin\AdminController@dashboard');
 
-Route::get('/waitlist', function () {
-    return view('pages/waitlist');
-});
+//Admin Food Categories
+Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
+Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit'); 
+Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
 
-Route::get('/contact', function () {
-    return view('pages/contact');
-});
+//Admin Customers
+Route::get('/admin/food-items', 'admin\FoodItemsController@index');
+Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit'); 
+Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
 
-Route::get('/offers', function () {
-    return view('pages/offers   ');
-});
+//Admin Food Categories
+Route::get('/admin/offers-members', 'admin\CustomersController@allOffersMembers'); //with name of the method created in the controller
+Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit'); 
+Route::get('/admin/reservations', 'admin\CustomersController@allReservations'); //with that allreservations method
 
+//static pages
+Route::get('/', 'StaticPagesController@home'); 
+Route::get('/menu', 'StaticPagesController@menu');
+Route::get('/menu/{slug}', 'StaticPagesController@singleMenu'); 
+Route::get('/about', 'StaticPagesController@about');
+Route::get('/reservations', 'StaticPagesController@reservations');
+Route::get('/contact', 'StaticPagesController@contact');
+Route::get('/offers', 'StaticPagesController@offers');
+
+//admin users
+Route::get('/admin/users', 'admin\UsersController@index'); 
+Route::get('/admin/users/create', 'admin\UsersController@create'); 
+Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit'); 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
