@@ -515,13 +515,13 @@ body {
 }
 
 #app-layout .side-menu .location {
-  margin-bottom: -45px;
   align-self: center;
   position: absolute;
   bottom: 100px;
 }
 
 #app-layout .side-menu .location .address {
+  margin-bottom: 10px;
   color: #7a8d99;
   margin-bottom: 20px;
   line-height: 1.7;
@@ -529,7 +529,7 @@ body {
 
 #app-layout .side-menu .location .phone-number a {
   color: #0971ce;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
 }
@@ -822,7 +822,7 @@ h2 {
 
 @media (min-width: 768px) and (max-width: 991px) {
   #app-layout .side-menu {
-    display: grid;
+    display: none;
   }
 
   #app-layout .welcome-jumbo {
@@ -846,7 +846,7 @@ h2 {
   }
 
   #information .info {
-    padding: 40px;
+    padding: 20px;
   }
 
   #information .info .about-link span {

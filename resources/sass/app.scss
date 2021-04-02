@@ -1,3 +1,6 @@
+// Fonts
+
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
 @import "bootstrap.min.css"; 
@@ -45,14 +48,14 @@ body {
 
 #app-layout{
   display: grid;
-//   grid-template-columns: 350px 1fr;
+  // grid-template-columns: 350px 1fr;
   width: 100%;
   height: 100vh;
 
 
   .side-menu{
     background: white;
-    padding: 50px; 
+    padding: 50px;
     position: absolute;
     height: 100vh; 
     width: 300px; 
@@ -95,7 +98,6 @@ body {
     }
     .social-icons{
       display: flex;
-      
       a{
         display: flex;
         justify-content: center;
@@ -111,11 +113,12 @@ body {
       }
     }
     .location{
-        margin-bottom: -45px; 
+    
       align-self: center;
       position: absolute;
       bottom: 100px;
       .address{
+        margin-bottom: 10px; 
         color: #7a8d99;
         margin-bottom: 20px;
         line-height: 1.7;
@@ -123,7 +126,7 @@ body {
       .phone-number{
         a{
           color: #0971ce;
-          font-size: 1.2rem;
+          font-size: 2rem;
           font-weight: 700;
           text-decoration: none;
         }
@@ -408,7 +411,7 @@ h2{
 @media (min-width: 768px) and (max-width: 991px) {
   #app-layout {
     .side-menu {
-      display: grid;
+      display: none;
     }
     .welcome-jumbo {
       width: 100%; 
@@ -429,7 +432,7 @@ h2{
     grid-template-columns: 1fr;
     grid-template-rows: 400px auto; 
     .info {
-      padding: 40px;
+      padding: 20px;
       .about-link {
         span {
           width: 50%; 

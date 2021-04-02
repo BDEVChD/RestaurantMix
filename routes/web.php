@@ -64,3 +64,7 @@ Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
