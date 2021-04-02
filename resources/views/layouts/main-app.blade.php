@@ -12,8 +12,8 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-        <!-- Styles -->
-        <!-- <style>
+        Styles 
+         <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -64,7 +64,7 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-        </style> -->
+        </style>
     </head>
     <body>
     <section id="app-layout">

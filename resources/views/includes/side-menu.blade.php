@@ -15,7 +15,7 @@
             </li>
            
             <li>
-              <a href="/reservations">Reservations</a>
+              <a href="/reservations">Reservationssss</a>
             </li>
             <li>
               <a href="/offers">Offers</a>
