@@ -13,23 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
-//Admin Dashboard
-Route::get('/admin', function () {
-    return view('admin/dashboard');
-});
+// //Admin Dashboard
+// Route::get('/admin', function () {
+//     return view('admin/dashboard');
+// });
 
-//Admin Authentication
-Route::get('/admin/register', function () {
-    return view('admin/register');
-});
+// //Admin Authentication
+// Route::get('/admin/register', function () {
+//     return view('admin/register');
+// });
 
-Route::get('/admin/login', function () {
-    return view('admin/login');
-});
+// Route::get('/admin/login', function () {
+//     return view('admin/login');
+// });
 //Admin Dashboard: 
 Route::get('/admin', 'admin\AdminController@dashboard');
 

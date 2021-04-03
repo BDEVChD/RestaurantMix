@@ -44,13 +44,22 @@
                 <p>Please enter your user information.</p>
             </div>
             <div class="card-body">
-            
+                         <div class="form-group">
+                            <input id="fname" class="form-control form-control-lg @error('fname') is-invalid @enderror" type="text" value="{{ old('fname') }}" required autocomplete="name"
+                            name="fname" required="" placeholder="First Name" autocomplete="off">   
+                            
+                            @error('fname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                         </div>
                        
                         <div class="form-group">
-                            <input class="form-control form-control-lg @error('name') is-invalid @enderror" type="text" value="{{ old('name') }}" required autocomplete="name"
-                            name="name" required="" placeholder="Name" autocomplete="off">   
+                            <input id="lname" class="form-control form-control-lg @error('lname') is-invalid @enderror" type="text" value="{{ old('lname') }}" required autocomplete="name"
+                            name="lname" required="" placeholder="Last Name" autocomplete="off">   
                             
-                            @error('name')
+                            @error('lname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
