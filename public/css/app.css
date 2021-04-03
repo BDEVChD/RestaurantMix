@@ -194,14 +194,21 @@ table {
   font-size: 3rem;
   font-weight: 700;
   color: black;
+  font-family: Nunito;
   margin-bottom: 2.5rem;
 }
 
 #about-page p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 2;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 2rem;
-  font-weight: 500;
+  text-indent: 50px;
+}
+
+#about-page .content-box {
+  background: white;
+  padding: 20px;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -224,43 +231,37 @@ table {
   font-size: 3rem;
   font-weight: 700;
   color: black;
+  font-family: Nunito;
   margin-bottom: 2.5rem;
 }
 
 #waitlist-page p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 2;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 2rem;
-  font-weight: 500;
+  text-indent: 50px;
 }
 
-#waitlist-page .row .form-group label {
+#waitlist-page form .form-group label {
   font-weight: 700;
   margin-bottom: 10px;
-  color: black;
 }
 
-#waitlist-page .row .form-group .form-control {
-  padding: 10px;
-  border: 2px solid #9c1b24;
-  font-size: 1.3rem;
-  box-sizing: border-box;
+#waitlist-page form .form-group .form-control {
+  padding: 10px !important;
   height: auto;
 }
 
-#waitlist-page .row .form-group button[type=submit] {
+#waitlist-page form .form-group button[type=submit] {
   background: #9c1b24;
-  border: none;
   padding: 20px 40px;
+  border: none;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
   #waitlist-page {
     padding: 20px;
-  }
-
-  #waitlist-page h1 {
-    font-size: 2rem;
   }
 }
 
@@ -296,7 +297,6 @@ table {
 
 #offers-page .row .form-group .form-control {
   padding: 10px;
-  border: 2px solid #9c1b24;
   font-size: 1.3rem;
   box-sizing: border-box;
   height: auto;
