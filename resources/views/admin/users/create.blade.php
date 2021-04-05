@@ -39,28 +39,65 @@
                             <div class="card">
                                 <h5 class="card-header">New User</h5>
                                 <div class="card-body">
-                                    <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                                <form class="splash-container" method="POST" action="/admin/users">
+                                     @csrf
                                         <div class="form-group">
                                             <label for="inputfirstname">First Name</label>
-                                            <input id="inputfirstname" type="text" name="fname" data-parsley-trigger="change" required="" placeholder="Enter first name" autocomplete="off" class="form-control">
+                                            <input id="inputfirstname" class="form-control form-control-lg @error('fname') is-invalid @enderror" type="text" value="{{ old('fname') }}" required autocomplete="name"
+                            name="fname" required="" placeholder="First Name" autocomplete="off">   
+                            
+                            @error('fname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                         </div>
                                         <div class="form-group">
                                             <label for="inputlastname">Last Name</label>
-                                            <input id="inputlastname" type="text" name="lname" data-parsley-trigger="change" required="" placeholder="Enter Last name" autocomplete="off" class="form-control">
+                                            <input id="inputlastname" class="form-control form-control-lg @error('lname') is-invalid @enderror" type="text" value="{{ old('lname') }}" required autocomplete="name"
+                            name="lname" required="" placeholder="Last Name" autocomplete="off">   
+                            
+                            @error('lname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                         </div>
                                         <div class="form-group">
                                             <label for="inputemail">Email</label>
-                                            <input id="inputemail" type="email" name="email" data-parsley-trigger="change" required="" placeholder="Enter email" autocomplete="off" class="form-control">
+                                            <input id="inputemail" type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="email" required autocomplete="email">
+
+                                            @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                         <div class="form-group">
                                             <label for="inputpassword">Password</label>
-                                            <input id="inputpassword" type="password" name="password" data-parsley-trigger="change" required="" placeholder="Enter Password" autocomplete="off" class="form-control">
+                                            <input id="inputpassword" type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" placeholder="password" required autocomplete="new-password">
+
+                                                    @error('password')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirmpassword">Confirm Password</label>
+                                            <input id="confirmpassword" type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password" placeholder="confirm password">
                                         </div>
                                         <div class="form-group">
                                                 <label for="inputrole">Role</label>
-                                                <select class="form-control" id="input-select">
-                                                    <option value="admin">Admin</option>
-                                                    <option value="employee">Employee</option>
+                                                <select name="role_id" class="form-control" id="inputrole">
+                                                @foreach ($roles as $role)
+                                                <option value="{{$role->id}}"  
+                                                @if ($role->title == 'Admin')
+                                                  selected
+                                                @endif
+                                                >{{$role->title}}</option>
+                                            @endforeach
+                                                    
                                                 </select>
                                             </div>
             
