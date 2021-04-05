@@ -21,8 +21,14 @@ class UsersController extends Controller
             'users' => $users]);
     }
 
-    public function edit(){
-        return view('admin/users/edit');
+    public function edit($id){
+              
+        $user = User::find($id);  // go into database and find the user pivoting off of id
+        $roles = Role::All();
+        return view('admin/users/edit', [
+            'user' => $user, 
+            'roles' => $roles
+        ]);
     }
     public function create(){
         $roles = Role::All();
@@ -43,4 +49,37 @@ class UsersController extends Controller
         return redirect('/admin/users');
     
     }   
+    public function update($id){
+        request()->validate([
+            'fname' => ['required', 'string', 'max:255'],
+            'lname' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'role_id' => ['required']
+        ]);     
+
+         // return request()->all();
+         $user = User::find($id);
+         $user->fname = request('fname'); 
+         $user->lname = request('lname'); 
+         $user->email = request('email');
+         $user->password = Hash::make(request('password'));  
+         $user->save(); 
+         $user->roles()->syncWithoutDetaching([request('role_id')]);
+ 
+         return redirect('/admin/users');
+       
+        // $user = User::find($id);  // go into database and find the user pivoting off of id
+        // $roles = Role::All();
+        // return view('admin/users/edit', [
+        //     'user' => $user, 
+        //     'roles' => $roles
+        // ]);
+    }
+
+    public function delete($id){
+        $user = User::find($id); 
+        $user->delete(); 
+        return redirect('/admin/users');
+    }
 }
