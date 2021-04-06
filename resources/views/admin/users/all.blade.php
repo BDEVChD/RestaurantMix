@@ -59,10 +59,11 @@
                                                     <!-- <a href="/admin/users/{{$user->id}}/delete" onclick="if (! confirm('Are you sure you want to delete this category?')) {return false; }"><i class="far fa-trash-alt"></a>
                                                 </i> -->
                                                 <a href="#" onclick="event.preventDefault();
-                                                            document.getElementById('delete-user-{{$user->id}}').submit();" href="{{ route('logout') }}"><i class="fas fa-power-off mr-2"></i></a>
+                                                            document.getElementById('delete-user-{{$user->id}}').submit();" href="{{ route('logout') }}"><i class="fas fa-trash mr-2"></i></a>
                                 
 
                                             <form id="delete-user-{{$user->id}}" action="/admin/users/{{$user->id}}/delete" method="POST" class="d-none">
+                                                @method('DELETE')
                                                 @csrf
                                             </form></td>
                                             </tr>

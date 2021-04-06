@@ -110,7 +110,7 @@
                 repellendus natus nihil?
               </p>
               <div class="food-image">
-                <img src="/img/CHIPS.png">
+                <img src="/img/Download-Salad-Transparent-PNG.png">
               </div>
             </div>
 
