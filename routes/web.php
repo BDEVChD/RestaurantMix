@@ -64,6 +64,8 @@ Route::get('/about', 'StaticPagesController@about');
 Route::get('/reservations', 'StaticPagesController@reservations');
 Route::get('/contact', 'StaticPagesController@contact');
 Route::get('/offers', 'StaticPagesController@offers');
+Route::get('/offers/thank-you', 'StaticPagesController@offersThankYou');
+Route::post('/offers', 'StaticPagesController@registerMember');
 
 //admin users
 Route::get('/admin/users', 'admin\UsersController@index'); 
