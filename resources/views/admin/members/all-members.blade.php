@@ -48,13 +48,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Billy Rodriguez</td>
-                                                <td>Billy.Toodles@gmail.com</td>
-                                                <td>348-194-4958</td>
-                                                <td>4/8/2018</td>
-                                            </tr>
+                                       
                                         </tbody>
                                     </table>
                                 </div>

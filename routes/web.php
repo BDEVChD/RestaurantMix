@@ -73,6 +73,14 @@ Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
 Route::delete('/admin/users/{id}/delete', 'admin\UsersController@delete'); 
 Route::put('/admin/users/{id}', 'admin\UsersController@update'); 
 
+
+//Customers Area 
+Route::get('/admin/members', 'admin\MemberController@index');
+
+//Admin Reservations
+Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
