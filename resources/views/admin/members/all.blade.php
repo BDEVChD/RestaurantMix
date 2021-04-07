@@ -44,11 +44,30 @@
                                                 <th scope="col">Full Name</th>
                                                 <th scope="col">Email</th>
                                                 <th scope="col">Phone Number</th>
-                                                <th scope="col">Date Created</th>
+                                                <th scope="col">Date</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                       
+                                        @foreach ($members as $member)
+                                        <tr>
+                                                <th scope="row">{{$member->id}}</th>
+                                                <td>{{$member->fname}} {{$member->lname}}</td>                                      
+                                                <td>{{$member->email}}</td>
+                                                <td>{{$member->phone_number}}</td>
+                                                <td>{{date('m/d/Y', strtotime($member->updated_at))}}</td>
+                                                <td><a href="/admin/food-members/{{$member->id}}/edit"><i class="far fa-edit"></i></td>
+                                                <td>
+                                                    
+                                                <a href="#" onclick="event.preventDefault();
+                                                            document.getElementById('delete-member-{{$member->id}}').submit();" href="{{ route('logout') }}"><i class="fas fa-trash mr-2"></i></a>
+                                
+
+                                            <form id="delete-member-{{$member->id}}" action="/admin/food-members/{{$member->id}}/delete" method="POST" class="d-none">
+                                                @method('DELETE')
+                                                @csrf
+                                            </form></td>
+                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>

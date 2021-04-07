@@ -61,11 +61,39 @@
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fa fa-fw fa-rocket"></i>Customers</a>
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="/admin/members">Offers Members <span class="badge badge-secondary">New</span></a>
+                                    <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3-1" aria-controls="submenu-3-1">Offer Members</a>
+                                            <div id="submenu-3-1" class="collapse submenu" style="">
+                                                <ul class="nav flex-column">
+                                                <li class="nav-item">
+                                                <a class="nav-link" href="/admin/members">All Members <span class="badge badge-secondary">New</span></a>
+
+                                                    </li>
+                                                   
+                                                  
+                                                </ul>
+                                            </div>
                                         </li>
+
+
+
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/admin/reservations">Reservations <span class="badge badge-secondary">New</span></a>
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3-2" aria-controls="submenu-3-2">Reservations</a>
+                                            <div id="submenu-3-2" class="collapse submenu" style="">
+                                                <ul class="nav flex-column">
+                                                <li class="nav-item">
+                                                <a class="nav-link" href="/admin/reservations">All Reservations <span class="badge badge-secondary">New</span></a>
+
+                                                    </li>
+                                                   
+                                                  
+                                                </ul>
+                                            </div>
+                                        </li>
+                                       
+            
+                                      
+                                            
                                         </li>
                                         <!-- <li class="nav-item">
                                             <a class="nav-link" href="pages/cards.html">Settings <span class="badge badge-secondary">New</span></a>
@@ -76,6 +104,7 @@
                                     </ul>
                                 </div>
                             </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fa fa-fw fa-rocket"></i>Users</a>
                                 <div id="submenu-4" class="collapse submenu" style="">
