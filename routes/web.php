@@ -46,6 +46,10 @@ Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update
 Route::get('/admin/food-items', 'admin\FoodItemsController@index');
 Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit'); 
 Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
+Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete'); 
+Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update'); 
+Route::post('/admin/food-items', 'admin\FoodItemsController@store'); 
+
 
 //Admin Food Categories
 Route::get('/admin/offers-members', 'admin\CustomersController@allOffersMembers'); //with name of the method created in the controller

@@ -55,13 +55,12 @@
                                                 <td>{{date('m/d/Y', strtotime($category->updated_at))}}</td>
                                                 <td><a href="/admin/food-categories/{{$category->id}}/edit"><i class="far fa-edit"></i></td>
                                                 <td>
-                                                    <!-- <a href="/admin/users/{{$category->id}}/delete" onclick="if (! confirm('Are you sure you want to delete this category?')) {return false; }"><i class="far fa-trash-alt"></a>
-                                                </i> -->
+                                                    
                                                 <a href="#" onclick="event.preventDefault();
-                                                            document.getElementById('delete-user-{{$category->id}}').submit();" href="{{ route('logout') }}"><i class="fas fa-trash mr-2"></i></a>
+                                                            document.getElementById('delete-category-{{$category->id}}').submit();" href="{{ route('logout') }}"><i class="fas fa-trash mr-2"></i></a>
                                 
 
-                                            <form id="delete-user-{{$category->id}}" action="/admin/food-categories/{{$category->id}}/delete" method="POST" class="d-none">
+                                            <form id="delete-category-{{$category->id}}" action="/admin/food-categories/{{$category->id}}/delete" method="POST" class="d-none">
                                                 @method('DELETE')
                                                 @csrf
                                             </form></td>

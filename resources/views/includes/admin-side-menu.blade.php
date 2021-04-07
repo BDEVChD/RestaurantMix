@@ -49,7 +49,7 @@
                                                  <a class="nav-link" href="/admin/food-items">All Food items <span class="badge badge-secondary">New</span></a>
                                         </li>
                                                 <li class="nav-item">
-                                                 <a class="nav-link" href="/admin/food-items/{}/create">New Food Item <span class="badge badge-secondary">New</span></a>
+                                                 <a class="nav-link" href="/admin/food-items/create">New Food Item <span class="badge badge-secondary">New</span></a>
                                         </li>
                                                 </ul>
                                             </div>
