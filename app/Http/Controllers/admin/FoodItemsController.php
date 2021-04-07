@@ -14,13 +14,6 @@ class FoodItemsController extends Controller
         $this->middleware('auth');
     }
 
-    // public function edit(){
-    //     return view('admin/food-items/edit');
-    // }
-    // public function create(){
-    //     return view('admin/food-items/create');
-    // }   
-
     public function index(){
         $items = FoodItem::paginate(10); 
         return view('admin/food-items/all', [

@@ -78,6 +78,7 @@ Route::put('/admin/users/{id}', 'admin\UsersController@update');
 
 //Customers Area 
 Route::get('/admin/members', 'admin\MemberController@index');
+Route::delete('/admin/members/{id}/delete', 'admin\MemberController@delete'); 
 
 //Admin Reservations
 Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
