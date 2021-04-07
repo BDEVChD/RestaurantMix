@@ -39,15 +39,43 @@
                             <div class="card">
                                 <h5 class="card-header">Edit a New Category</h5>
                                 <div class="card-body">
-                                    <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                                <form class="splash-container" method="POST" action="/admin/food-categories/{{$category->id}}">
+                                     @csrf
+                                     @method('PUT')
                                         <div class="form-group">
-                                            <label for="inputCategory">Category Name</label>
-                                            <input id="inputCategory" type="text" name="category" data-parsley-trigger="change" required="" placeholder="Enter category name" autocomplete="off" class="form-control">
+                                            <label for="inputtitle">Title</label>
+                                            <input id="inputtitle" class="form-control form-control-lg @error('title') is-invalid @enderror" type="text" value="{{ old('title', $category->title) }}" required autocomplete="name"
+                            name="title" required="" placeholder="Give Your Category a Title" autocomplete="title">   
+                            
+                            @error('title')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputCategoryImageUrl">Category Image Url</label>
-                                            <input id="inputCategoryImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" placeholder="http://www.bgimage.com/burgers.jpg" autocomplete="off" class="form-control">
+                                            <label for="description">Description</label>
+                                            <textarea id="description" class="form-control form-control-lg @error('description') is-invalid @enderror" type="text" required 
+                            name="description" required="" placeholder="Write a Description" autocomplete="off">{{ old('description',  $category->description) }}</textarea>   
+                            
+                            @error('lname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                         </div>
+                                        <div class="form-group">
+                                            <label for="imageurl">Image URL</label>
+                                            <input id="imageurl" class="form-control form-control-lg @error('image_url') is-invalid @enderror" type="text" value="{{ old('image_url', $category->image_url) }}" required autocomplete="name"
+                            name="image_url" required="" placeholder="Add the URL to the Category Image" autocomplete="title">   
+                            
+                            @error('image_url')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                        </div>
+                                       
                                        
                                         <div class="row">
                                             <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
