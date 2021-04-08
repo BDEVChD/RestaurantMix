@@ -12,15 +12,14 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">New Food Category </h2>
+                            <h2 class="pageheader-title">Edit General Settings </h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="/admin" class="breadcrumb-link">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="/admin/food-categories" class="breadcrumb-link">All Food Categories</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">New Food Category</li>
-                                    </ol>
+                                       
+                                        <li class="breadcrumb-item active" aria-current="page">Edit Food General Settings
                                 </nav>
                             </div>
                         </div>
@@ -37,65 +36,92 @@
                         <!-- ============================================================== -->
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="card">
-                                <h5 class="card-header">Create a New Category</h5>
+                                <h5 class="card-header">Edit General Setting</h5>
                                 <div class="card-body">
-                                <form class="splash-container" method="POST" action="/admin/food-categories">
+                                <form class="splash-container" method="POST" action="/admin/settings/general">
                                      @csrf
+                                     @method('PUT')
                                         <div class="form-group">
-                                            <label for="inputtitle">Title</label>
-                                            <input id="inputtitle" class="form-control form-control-lg @error('title') is-invalid @enderror" type="text" value="{{ old('title') }}" required autocomplete="name"
-                            name="title" required="" placeholder="Give Your Category a Title" autocomplete="title">   
+                                            <label for="inputtitle">Business Name</label>
+                                            <input id="inputtitle" class="form-control form-control-lg @error('site_title') is-invalid @enderror" type="text" value="{{ old('site_title', $general_setting->site_title) }}" required autocomplete="name"
+                            name="site_title" required="" placeholder="Add a Site Title" autocomplete="site_title">   
                             
-                            @error('title')
+                            @error('site_title')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label for="description">Description</label>
-                                            <textarea id="description" class="form-control form-control-lg @error('description') is-invalid @enderror" type="text" required 
-                            name="description" required="" placeholder="Write a Description" autocomplete="off">{{ old('description') }}</textarea>   
+                                            <label for="inputaddress1">Address 1</label>
+                                            <input id="inputaddress1" class="form-control form-control-lg @error('address_1') is-invalid @enderror" type="text" value="{{ old('address_1', $general_setting->address_1) }}" required autocomplete="name"
+                            name="address_1" required="" placeholder="Add a Street Address" autocomplete="address_1">   
                             
-                            @error('lname')
+                            @error('address_1')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label for="imageurl">Image URL</label>
-                                            <input id="imageurl" class="form-control form-control-lg @error('image_url') is-invalid @enderror" type="text" value="{{ old('image_url') }}" required autocomplete="name"
-                            name="image_url" required="" placeholder="Add the URL to the Category Image" autocomplete="title">   
+                                            <label for="inputaddress2">Address 2</label>
+                                            <input id="inputaddress2" class="form-control form-control-lg @error('address_2') is-invalid @enderror" type="text" value="{{ old('address_2', $general_setting->address_2) }}" required autocomplete="address_2"
+                            name="address_2" required="" placeholder="Add Apartment/Suite/Unit Number" autocomplete="address_2">   
                             
-                            @error('image_url')
+                            @error('address_2')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label for="imageurl">Price</label>
-                                            <input id="imageurl" class="form-control form-control-lg @error('image_url') is-invalid @enderror" type="text" value="{{ old('image_url') }}" required autocomplete="name"
-                            name="image_url" required="" placeholder="Add the URL to the Category Image" autocomplete="title">   
+                                            <label for="inputcity">City</label>
+                                            <input id="inputcity" class="form-control form-control-lg @error('city') is-invalid @enderror" type="text" value="{{ old('city', $general_setting->city) }}" required autocomplete="city"
+                            name="city" required="" placeholder="Add Apartment/Suite/Unit Number" autocomplete="city">   
                             
-                            @error('image_url')
+                            @error('city')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label for="imageurl">Category</label>
-                                            <input id="imageurl" class="form-control form-control-lg @error('image_url') is-invalid @enderror" type="text" value="{{ old('image_url') }}" required autocomplete="name"
-                            name="image_url" required="" placeholder="Add the URL to the Category Image" autocomplete="title">   
+                                            <label for="inputstate">State</label>
+                                            <input id="inputstate" class="form-control form-control-lg @error('state') is-invalid @enderror" type="text" value="{{ old('state', $general_setting->state) }}" required autocomplete="state"
+                            name="state" required="" placeholder="Add Apartment/Suite/Unit Number" autocomplete="state">   
                             
-                            @error('image_url')
+                            @error('state')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                                         </div>
+                                        <div class="form-group">
+                                            <label for="inputzipcode">Zipcode</label>
+                                            <input id="inputzipcode" class="form-control form-control-lg @error('zipcode') is-invalid @enderror" type="text" value="{{ old('zipcode', $general_setting->address_2) }}" required autocomplete="zipcode"
+                            name="zipcode" required="" placeholder="Add Apartment/Suite/Unit Number" autocomplete="zipcode">   
+                            
+                            @error('zipcode')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputphonenumber">Phone Number</label>
+                                            <input id="inputphonenumber" class="form-control form-control-lg @error('phone_number') is-invalid @enderror" type="text" value="{{ old('phone_number', $general_setting->phone_number) }}" required autocomplete="phone_number"
+                            name="phone_number" required="" placeholder="Add Apartment/Suite/Unit Number" autocomplete="phone_number">   
+                            
+                            @error('phone_number')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                        </div>
+                                        
+
+                                
+                                        
                                        
                                        
                                         <div class="row">
