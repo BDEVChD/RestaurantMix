@@ -124,24 +124,16 @@
                                 <div id="submenu-5" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/cards.html">General Settings <span class="badge badge-secondary">New</span></a>
+                                            <a class="nav-link" href="/admin/settings/general">General Settings <span class="badge badge-secondary">New</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
-                                            <div id="submenu-1-1" class="collapse submenu" style="">
-                                                <ul class="nav flex-column">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="dashboard-influencer.html">Influencer</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="influencer-profile.html">Influencer Profile</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
+                                            <a class="nav-link" href="/admin/settings/seo">SEO <span class="badge badge-secondary">New</span></a>
+                                        </li> 
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/settings/social">Social <span class="badge badge-secondary">New</span></a>
+                                        </li> 
+                    
+                                        
                                     </ul>
                                 </div>
                             </li>
