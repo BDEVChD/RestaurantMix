@@ -44,16 +44,30 @@
                                                 <th scope="col">Phone Number</th>
                                                 <th scope="col">Guests</th>
                                                 <th scope="col">Time</th>
+                                                <th scope="col">Delete</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Billy.Toodles@gmail.com</td>
-                                                <td>348-194-4958</td>
-                                                <td>1</td>
-                                                <td>7pm</td>
+                                       
+                                        @foreach ($reservations as $reservation)
+                                        <tr>
+                                                <th scope="row">{{$reservation->email}}</th>
+                                                <td>{{$reservation->phone_number}}</td>
+                                                <td>{{$reservation->guests_total}}</td>
+                                                <td>{{$reservation->time}}pm</td>
+            
+                                              
+                                                <td>
+                                                    
+                                                <a href="#" onclick="event.preventDefault();
+                                                            document.getElementById('delete-reservation-{{$reservation->id}}').submit();" href="{{ route('logout') }}"><i class="fas fa-trash mr-2"></i></a>
+                                
+
+                                            <form id="delete-reservation-{{$reservation->id}}" action="/admin/reservations/{{$reservation->id}}/delete" method="POST" class="d-none">
+                                                @method('DELETE')
+                                                @csrf
+                                            </form></td>
                                             </tr>
-                                        </tbody>
+                                        @endforeach
                                     </table>
                                 </div>
                             </div>
