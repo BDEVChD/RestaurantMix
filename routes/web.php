@@ -39,12 +39,12 @@ use Illuminate\Support\Facades\View;
 Route::get('/admin', 'admin\AdminController@dashboard');
 
 //Admin Food Categories
-Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
-Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit'); 
-Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
-Route::post('/admin/food-categories', 'admin\FoodCategoriesController@store'); 
+Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index')->middleware('role:admin');
+Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit')->middleware('role:admin'); 
+Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create')->middleware('role:admin');
+Route::post('/admin/food-categories', 'admin\FoodCategoriesController@store')->middleware('role:admin'); 
 Route::delete('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesController@delete'); 
-Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update'); 
+Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update')->middleware('role:admin'); 
 
 
 //Admin Customers
@@ -103,10 +103,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Admin Settings 
 Route::get('/admin/settings/general', 'admin\SettingController@general'); 
 Route::put('/admin/settings/general', 'admin\SettingController@saveGeneral'); 
-Route::get('/admin/settings/seo', 'admin\SettingController@seo'); 
-Route::put('/admin/settings/seo', 'admin\SettingController@saveSeo'); 
-Route::get('/admin/settings/social', 'admin\SettingController@social'); 
-Route::put('/admin/settings/social', 'admin\SettingController@saveSocial'); 
+Route::get('/admin/settings/seo', 'admin\SettingController@seo')->middleware('role:admin'); 
+Route::put('/admin/settings/seo', 'admin\SettingController@saveSeo')->middleware('role:admin'); 
+Route::get('/admin/settings/social', 'admin\SettingController@social')->middleware('role:admin'); 
+Route::put('/admin/settings/social', 'admin\SettingController@saveSocial')->middleware('role:admin'); 
 
 View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'pages/contact', 'thank-you', 'menu/index', 'menu/single-menu'], function ($view) {  // for any view, we can pass something into it
     $generalSettings = GeneralSetting::find(1); 

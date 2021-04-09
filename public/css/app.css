@@ -223,6 +223,43 @@ table {
   }
 }
 
+#contact-page {
+  padding: 100px;
+}
+
+#contact-page h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  font-family: Nunito;
+  margin-bottom: 2.5rem;
+}
+
+#contact-page p {
+  font-size: 1rem;
+  line-height: 2;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 2rem;
+  text-indent: 50px;
+}
+
+#contact-page .content-box {
+  background: white;
+  padding: 20px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #contact-page {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #contact-page {
+    padding: 20px;
+  }
+}
+
 #waitlist-page {
   padding: 100px;
 }

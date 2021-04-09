@@ -1,4 +1,4 @@
-#about-page {
+#contact-page {
     padding: 100px; 
     h1{
         font-size: 3rem; 
@@ -6,7 +6,7 @@
         color: black; 
         font-family: Nunito;
         margin-bottom: 2.5rem; 
-       
+     
     }
     p {
         font-size: 1rem; 
@@ -24,14 +24,14 @@
 
 
 @media (min-width: 0px) and (max-width: 767px) { 
-   #about-page {
+   #contact-page {
        padding: 20px; 
    };
   }
   
   // Medium devices (tablets, 768px and up)
   @media (min-width: 768px) and (max-width: 991px) {
-    #about-page {
+    #contact-page {
         padding: 20px; 
     };
     

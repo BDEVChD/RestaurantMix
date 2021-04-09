@@ -10,18 +10,12 @@ use App\User;
 
 class FoodCategoriesController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    // public function edit(){
-    //     return view('admin/food-categories/edit');
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
     // }
-    // public function create(){
-    //     return view('admin/food-categories/create');
-    // }   
 
+   
     public function index(){
         $categories = FoodCategory::paginate(10); 
         return view('admin/food-categories/all', [
