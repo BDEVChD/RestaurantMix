@@ -75,12 +75,12 @@ Route::get('/offers/thank-you', 'StaticPagesController@offersThankYou');
 Route::post('/offers', 'StaticPagesController@registerMember');
 
 //admin users
-Route::get('/admin/users', 'admin\UsersController@index'); 
-Route::get('/admin/users/create', 'admin\UsersController@create'); 
-Route::post('/admin/users', 'admin\UsersController@store'); 
-Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit'); 
-Route::delete('/admin/users/{id}/delete', 'admin\UsersController@delete'); 
-Route::put('/admin/users/{id}', 'admin\UsersController@update'); 
+Route::get('/admin/users', 'admin\UsersController@index')->middleware('role:admin'); 
+Route::get('/admin/users/create', 'admin\UsersController@create')->middleware('role:admin'); 
+Route::post('/admin/users', 'admin\UsersController@store')->middleware('role:admin'); 
+Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit')->middleware('role:admin'); 
+Route::delete('/admin/users/{id}/delete', 'admin\UsersController@delete')->middleware('role:admin'); 
+Route::put('/admin/users/{id}', 'admin\UsersController@update')->middleware('role:admin'); 
 
 
 //Customers Area 
