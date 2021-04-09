@@ -100,5 +100,5 @@ Route::get('/admin/settings/general', 'admin\SettingController@general');
 Route::put('/admin/settings/general', 'admin\SettingController@saveGeneral'); 
 Route::get('/admin/settings/seo', 'admin\SettingController@seo'); 
 Route::put('/admin/settings/seo', 'admin\SettingController@saveSeo'); 
-Route::get('/admin/settings/social', 'admin\SettingController@socialAccounts'); 
-Route::put('/admin/settings/social', 'admin\SettingController@saveSocialAccounts'); 
+Route::get('/admin/settings/social', 'admin\SettingController@social'); 
+Route::put('/admin/settings/social', 'admin\SettingController@saveSocial'); 

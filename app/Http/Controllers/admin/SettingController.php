@@ -67,6 +67,7 @@ class SettingController extends Controller
     
     public function saveSeo(){
         $id = 1; 
+        
         request()->validate([
             'description' => ['required', 'string'],
             'keywords' => ['required', 'string', ],
@@ -82,6 +83,38 @@ class SettingController extends Controller
          $seo_setting->save(); 
  
          return redirect('admin/settings/seo');
+       
+      
+    }
+    public function social(){
+        $id = 1;  
+        $social_setting = SocialSetting::find($id);  // go into database and find the GeneralSetting pivoting off of id
+     
+        return view('admin/settings/social', [
+            'social_setting' => $social_setting
+        ]);
+    }
+
+    
+    public function saveSocial(){
+        $id = 1; 
+        request()->validate([
+            'facebook_url' => [ 'string'],
+            'twitter_url' => [ 'string', ],
+            'instagram_url' => [ 'string' ],
+  
+        ]);     
+
+
+         // return request()->all();
+         $social_setting = SocialSetting::find($id);
+         $social_setting->facebook_url= request('facebook_url'); 
+         $social_setting->twitter_url = request('twitter_url'); 
+         $social_setting->instagram_url = request('instagram_url'); 
+ 
+         $social_setting->save(); 
+ 
+         return redirect('admin/settings/social');
        
       
     }
