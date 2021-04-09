@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\GeneralSetting;
+use App\SocialSetting;
+use App\SeoSetting;  
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -102,3 +107,15 @@ Route::get('/admin/settings/seo', 'admin\SettingController@seo');
 Route::put('/admin/settings/seo', 'admin\SettingController@saveSeo'); 
 Route::get('/admin/settings/social', 'admin\SettingController@social'); 
 Route::put('/admin/settings/social', 'admin\SettingController@saveSocial'); 
+
+View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'pages/contact', 'thank-you', 'menu/index', 'menu/single-menu'], function ($view) {  // for any view, we can pass something into it
+    $generalSettings = GeneralSetting::find(1); 
+    $socialSettings = SocialSetting::find(1); 
+    $seoSettings = SeoSetting::find(1); 
+
+    $view->with('settings', [
+        "general" => $generalSettings, 
+        "social" => $socialSettings, 
+        "seo" => $seoSettings
+    ]); 
+});

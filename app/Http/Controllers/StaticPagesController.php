@@ -5,11 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Member;
 use App\Reservation; 
+use App\GeneralSetting; 
+use App\SocialSetting; 
+use App\SeoSetting; 
 
 class StaticPagesController extends Controller
 {
     public function home(){
-        return view('home');
+        $generalSettings = GeneralSetting::find(1); 
+        $socialSettings = SocialSetting::find(1); 
+    
+        return view('home', [
+            "generalSettings" => $generalSettings,
+            "socialSettings" => $socialSettings
+        ]);
     }
     public function about(){
         return view('pages/about');
