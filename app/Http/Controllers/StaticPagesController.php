@@ -8,16 +8,21 @@ use App\Reservation;
 use App\GeneralSetting; 
 use App\SocialSetting; 
 use App\SeoSetting; 
+use App\FoodCategory;
+use App\FoodItem;  
 
 class StaticPagesController extends Controller
 {
     public function home(){
         $generalSettings = GeneralSetting::find(1); 
         $socialSettings = SocialSetting::find(1); 
+
+        $categories = FoodCategory::all(); 
     
         return view('home', [
             "generalSettings" => $generalSettings,
-            "socialSettings" => $socialSettings
+            "socialSettings" => $socialSettings, 
+            "categories" => $categories
         ]);
     }
     public function about(){
@@ -50,7 +55,10 @@ class StaticPagesController extends Controller
     
     }
     public function menu(){
-        return view('menu/index');
+        $categories = FoodCategory::all(); 
+        return view('menu/all-categories', [
+            'categories' => $categories]);
+        return view('');
     }
 
     public function offersThankYou(){
@@ -61,8 +69,11 @@ class StaticPagesController extends Controller
         return view('pages/thank-you');
     }
     public function singleMenu($slug){
+        $foodCategory = FoodCategory::where('title', '=', $slug)->first(); 
+        $foodItems = FoodItem::where('category_id', '=', $foodCategory->id)->get(); 
         return view('menu/single-menu', [
-            "foodItem" =>  ucfirst($slug)
+            "foodItem" =>  ucfirst($slug),
+            "foodItems" => $foodItems
         ]);
     }
 

@@ -54,6 +54,14 @@ class FoodCategorySeeder extends Seeder
             'created_at' => Carbon::now()
         
         ]);
+        DB::table('food_categories')->insert([
+            'title' => 'drinks',
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis iste ab deleniti cupiditate architecto', 
+            'image_url' => '/img/cocktail.jpg',
+            'updated_at' => Carbon::now(),
+            'created_at' => Carbon::now()
+        
+        ]);
        
     }
 }
