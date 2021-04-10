@@ -36,3 +36,32 @@
     </div>
 
   </section>
+
+  
+
+  <script>
+      let slides = $('.sliding-system a.slide').length; 
+      let maxSlides; 
+      let moveTotal; 
+      let currentSlide = 0; 
+      $(window).resize(function(){
+          currentSlide = 0; 
+          $('sliding-system').css('transform', 'translate3d(-0%, 0, 0)'); 
+      })
+      function desktopSlider(){
+          if(a.matches){
+            maxSlides = Math.ceil((slides * 20) / 100);
+            moveTotal = 100; 
+
+            $('.right-btn').on('click', () => {
+                console.log('clicked right btn')
+            })
+          }
+      }
+      var a = window.matchMedia("(min-width: 998px)")
+      desktopSlider(a)
+      a.addListener(desktopSlider)
+
+    //   npm install jquery-ui --save-dev
+
+  </script>

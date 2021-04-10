@@ -671,6 +671,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: auto;
+  width: 100%;
 }
 
 #food-preview h2 {
@@ -727,7 +729,7 @@ body {
 }
 
 #food-preview .food-slider .sliding-system {
-  white-space: nowrap;
+  white-space: normal;
   transform: translate3d(0%, 0, 0);
 }
 
@@ -855,10 +857,12 @@ h2 {
 
   #food-preview .container .left-btn {
     left: -20px;
+    display: none;
   }
 
   #food-preview .container .right-btn {
     right: -20px;
+    display: none;
   }
 
   #food-preview h2 {
