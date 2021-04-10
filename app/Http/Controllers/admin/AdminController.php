@@ -16,28 +16,28 @@ class AdminController extends Controller
        $estimated_income_last_30 = DB::select(DB::raw('
         SELECT 
 	(sum(guests_total) *27 ) as total
-	FROM blogoz.reservations 
+	FROM reservations 
 	WHERE created_at BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()
 ')); 
    
      $total_customers_last_30 = DB::select(DB::raw('
      SELECT 
          sum(guests_total) as total
-         FROM blogoz.reservations 
+         FROM reservations 
          WHERE created_at BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()
      ')); 
 
      $total_reservations_last_30 = DB::select(DB::raw('
      SELECT 
      count(*) as total
-     FROM blogoz.reservations 
+     FROM reservations 
      WHERE created_at BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()
      ')); 
 
      $total_employees_last_30 = DB::select(DB::raw('
      SELECT 
      count(*) as total
-     FROM blogoz.users 
+     FROM users 
      INNER JOIN role_user on role_user.id = users.id
      INNER JOIN roles on roles.id = role_user.role_id
      WHERE role_id = 2
