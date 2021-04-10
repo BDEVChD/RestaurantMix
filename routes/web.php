@@ -108,7 +108,7 @@ Route::put('/admin/settings/seo', 'admin\SettingController@saveSeo')->middleware
 Route::get('/admin/settings/social', 'admin\SettingController@social')->middleware('role:admin'); 
 Route::put('/admin/settings/social', 'admin\SettingController@saveSocial')->middleware('role:admin'); 
 
-View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'pages/contact', 'thank-you', 'menu/all-categories', 'menu/single-menu'], function ($view) {  // for any view, we can pass something into it
+View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'pages/contact', 'pages/thank-you', 'menu/all-categories', 'menu/single-menu'], function ($view) {  // for any view, we can pass something into it
     $generalSettings = GeneralSetting::find(1); 
     $socialSettings = SocialSetting::find(1); 
     $seoSettings = SeoSetting::find(1); 
