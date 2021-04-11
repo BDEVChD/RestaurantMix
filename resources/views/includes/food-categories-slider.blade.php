@@ -37,6 +37,7 @@
 
   </section>
 
+  <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
   
 
   <script>
@@ -46,15 +47,19 @@
       let currentSlide = 0; 
       $(window).resize(function(){
           currentSlide = 0; 
-          $('sliding-system').css('transform', 'translate3d(-0%, 0, 0)'); 
+          $('.sliding-system').css('transform', 'translate3d(-0%, 0, 0)'); 
       })
       function desktopSlider(){
           if(a.matches){
             maxSlides = Math.ceil((slides * 20) / 100);
             moveTotal = 100; 
 
-            $('.right-btn').on('click', () => {
+            $('.right-btn .left-btn').on('click', () => {
                 console.log('clicked right btn')
+                // if(currentSlide < maxSlides){
+                //   currentSlide += 100; 
+                //   $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
+                // }
             })
           }
       }
@@ -62,6 +67,6 @@
       desktopSlider(a)
       a.addListener(desktopSlider)
 
-    //   npm install jquery-ui --save-dev
+   
 
   </script>
