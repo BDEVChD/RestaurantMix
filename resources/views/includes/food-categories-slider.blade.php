@@ -54,12 +54,12 @@
             maxSlides = Math.ceil((slides * 20) / 100);
             moveTotal = 100; 
 
-            $('.right-btn .left-btn').on('click', () => {
+            $('.right-btn').on('click', () => {
                 console.log('clicked right btn')
-                // if(currentSlide < maxSlides){
-                //   currentSlide += 100; 
-                //   $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
-                // }
+                if(currentSlide < maxSlides){
+                  currentSlide += 100; 
+                  $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
+                }
             })
           }
       }
