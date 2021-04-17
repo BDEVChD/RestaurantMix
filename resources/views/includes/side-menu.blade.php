@@ -25,7 +25,7 @@
           </li>
         </ul>
       </div>
-      <div class="social-icons">
+      <div class="social-icons" style="position:relative; top: -40px;">
         <a href="{{$settings['social']->facebook_url}}" target="new">
           <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
