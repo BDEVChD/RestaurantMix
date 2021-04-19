@@ -7,16 +7,13 @@ Food Menu {{$settings['general']->site_title}}
 @section('content')
 
 
-<div id="menu-page" style="position: relative;">
-       @include('includes.food-categories-slider')
-    </div>
    
     <section id="food-preview" style="background: -moz-radial-gradient(center, ellipse cover, #ed4852 0%, #9c1b24 100%); /* FF3.6-15 */
 background: -webkit-radial-gradient(center, ellipse cover, #ed4852 0%,#9c1b24 100%); /* Chrome10-25,Safari5.1-6 */
 background: radial-gradient(ellipse at center, #ed4852 0%,#9c1b24 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ ">
-    <h2 >We have everything you need to kill your hunger</h2>
-    <div class="button-rounded" style="position:relative; bottom: 210px; "  >View Our Menu</div>
-    <div class="container" style="position:relative; bottom: 250px; ">
+    <!-- <h2 style="color: white; font-size: 2rem; ">We have everything you need to kill your hunger</h2> -->
+    <div class="button-rounded" style="position:relative; bottom: 90px; "  >View Our Menu</div>
+    <div class="container" style="position:relative; bottom: 200px; ">
       <div class="left-btn">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
       </div>

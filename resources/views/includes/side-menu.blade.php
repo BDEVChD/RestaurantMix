@@ -25,19 +25,19 @@
           </li>
         </ul>
       </div>
-      <div class="social-icons" style="position:relative; top: -40px;">
+      <div class="social-icons" style="position:relative; top: -20px;">
         <a href="{{$settings['social']->facebook_url}}" target="new">
           <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
         <a href="{{$settings['social']->twitter_url}}" target="new"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         <a href="{{$settings['social']->instagram_url}}" target="new"><i class="fa fa-instagram" aria-hidden="true"></i></a>
       </div>
-      <div class="location">
-        <div class="address">
+      <div class="location" >
+        <div class="address"style="position: relative; top: 20px; " >
           {{$settings["general"]->address_1}}, {{$settings["general"]->address_2}}<br>
           {{$settings["general"]->city}}, {{$settings["general"]->state}}{{$settings["general"]->zipcode}}
         </div>
-        <div class="phone-number">
+        <div class="phone-number" style="position: relative; top: 10px; ">
           <a href="tel:7182198652">{{$settings["general"]->phone_number}}</a>
         </div>
       </div>
