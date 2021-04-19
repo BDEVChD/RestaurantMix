@@ -14,9 +14,9 @@ Billy Burger has been around since the beginning of time. Some might say there's
          <div class="row">
           <div class="col-md-6">
               <h1>About Page</h1>
-              <p>
-                Dreamcatcher tumeric asymmetrical cornhole yuccie freegan. Asymmetrical normcore try-hard, vexillologist blog actually listicle thundercats venmo yuccie adaptogen. Four dollar toast tbh chartreuse vice, plaid neutra VHS umami street art offal vexillologist adaptogen mustache lumbersexual. Poutine chia keytar letterpress chambray selfies taiyaki ugh cloud bread activated charcoal. artisan palo santo vice hot chicken slow-carb. Tacos post-ironic mixtape literally, actually listicle gluten-free neutra quinoa drinking vinegar pinterest vape cray.</p>
-               <p>    Dreamcatcher tumeric asymmetrical cornhole yuccie freegan. normcore try-hard, vexillologist blog actually listicle thundercats venmo yuccie adaptogen. Four dollar toast tbh chartreuse vice, plaid neutra VHS umami street art offal vexillologist adaptogen mustache. Poutine chia keytar letterpress chambray selfies taiyaki ugh cloud bread activated charcoal. Unicorn gentrify artisan palo santo vice hot chicken slow-carb. Tacos post-ironic mixtape literally, actually listicle gluten-free neutra quinoa drinking vinegar pinterest vape cray.</p>
+              <p >
+              Nostrud magna pickled butcher retro, adaptogen kitsch flexitarian occaecat mustache 3 wolf moon officia DIY lomo. Butcher woke thundercats photo booth. Tumeric cred kogi, asymmetrical nostrud fanny pack crudite est slow-carb esse hella kinfolk. Bicycle fugiat deserunt, everyday carry consequat yuccie single-origin coffee sint health goth tofu roof party chartreuse master cleanse.</p>
+               
           </div>
           <div class="col-md-6">
            <img src="/img/about-page-image.jpeg" class="img-fluid">
