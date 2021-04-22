@@ -30,7 +30,7 @@
                             <div class="item">
                                 <div class="title">
                                 <h4>{{$item->title}}</h4>
-                                <span class="price">{{$item->price}}</span>
+                                <span class="price">${{$item->price}}</span>
                                 </div>
                                 <div class="description">
                                     <p>{{$item->description}}</p>
